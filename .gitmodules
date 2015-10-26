@@ -1,0 +1,9 @@
+[submodule "third_party/wasm-experimental"]
+	path = third_party/wasm-experimental
+	url = https://github.com/webassembly/experimental
+[submodule "third_party/sexpr-wasm-prototype"]
+	path = third_party/sexpr-wasm-prototype
+	url = https://github.com/webassembly/sexpr-wasm-prototype
+[submodule "third_party/v8-native-prototype"]
+	path = third_party/v8-native-prototype
+	url = https://github.com/webassembly/v8-native-prototype
