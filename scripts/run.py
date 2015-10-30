@@ -16,6 +16,7 @@ WACC = os.path.join(BIN_DIR, 'wacc')
 WASMATE = os.path.join(BIN_DIR, 'wasmate.py')
 SEXPR_WASM = os.path.join(BIN_DIR, 'sexpr-wasm')
 D8 = os.path.join(BIN_DIR, 'd8')
+WASM_JS = os.path.join(REPO_ROOT_DIR, 'test', 'wasm.js')
 
 
 class Error(Exception):
@@ -25,7 +26,8 @@ class Error(Exception):
 def main(args):
   parser = argparse.ArgumentParser()
   parser.add_argument('c_file', help='test C file')
-  parser.add_argument('js_file', help='test JS file')
+  parser.add_argument('js_file', nargs='?',
+                      help='test JS file', default=WASM_JS)
   parser.add_argument('--dump', help='directory to store intermediate files')
   options = parser.parse_args(args)
 
