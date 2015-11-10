@@ -40,13 +40,13 @@ def main(args):
     temp_dir = options.dump
     if not os.path.exists(temp_dir):
       os.makedirs(temp_dir)
-  wack_file = os.path.join(temp_dir, basename + '.wack')
+  s_file = os.path.join(temp_dir, basename + '.s')
   wast_file = os.path.join(temp_dir, basename + '.wast')
   wasm_file = os.path.join(temp_dir, basename + '.wasm')
 
   try:
-    subprocess.check_call([WACC, '-fno-builtin', options.c_file, '-o', wack_file])
-    subprocess.check_call([sys.executable, WASMATE, wack_file, '-o', wast_file])
+    subprocess.check_call([WACC, '-fno-builtin', options.c_file, '-o', s_file])
+    subprocess.check_call([sys.executable, WASMATE, s_file, '-o', wast_file])
     subprocess.check_call([SEXPR_WASM, '--br-if', wast_file, '-o', wasm_file])
     process = subprocess.Popen([D8, options.js_file, '--', wasm_file],
                                stderr=subprocess.PIPE)

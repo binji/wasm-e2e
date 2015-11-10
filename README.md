@@ -6,9 +6,9 @@ This repository contains tools and scripts to compile C/C++ to a WebAssembly
 binary format, and run it.
 
 Currently this includes:
-- LLVM: for compiling C source to the "wack" format, which is the current
+- LLVM: for compiling C source to the ".s" format, which is the current
   output of WebAssembly by the LLVM backend.
-- wasmate: for converting "wack" to the S-expression format as defined in the
+- wasmate: for converting ".s" to the S-expression format as defined in the
   [spec repo](https://github.com/WebAssembly/spec).
 - sexpr-wasm: for converting the S-expression format to the v8-native binary
   format.
