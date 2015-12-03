@@ -1,4 +1,4 @@
-void puts(const char*);
+#include "test/wasm.h"
 
 int main() {
   puts("Hello, world!\n");
