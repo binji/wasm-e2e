@@ -47,7 +47,7 @@ def main(args):
   try:
     subprocess.check_call([WACC, '-fno-builtin', options.c_file, '-o', s_file])
     subprocess.check_call([sys.executable, WASMATE, s_file, '-o', wast_file])
-    subprocess.check_call([SEXPR_WASM, '--br-if', wast_file, '-o', wasm_file])
+    subprocess.check_call([SEXPR_WASM, wast_file, '-o', wasm_file])
     process = subprocess.Popen([D8, options.js_file, '--', wasm_file],
                                stderr=subprocess.PIPE)
     _, stderr = process.communicate()
