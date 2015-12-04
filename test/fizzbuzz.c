@@ -1,5 +1,4 @@
-void puts(const char*);
-void print(int);
+#include "test/wasm.h"
 
 int main() {
   int i;
