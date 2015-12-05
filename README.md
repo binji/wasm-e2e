@@ -37,7 +37,7 @@ with `--depth 5000` to reduce the download size.
 Updating the repo is almost the same:
 
 ```
-$ git pull origin
+$ git pull origin master
 $ git submodule update
 $ scripts/update-llvm.sh
 ```
