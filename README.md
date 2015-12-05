@@ -32,7 +32,7 @@ $ scripts/update-llvm.sh
 
 LLVM is not included as a submodule because it is quite large and requires a
 repo to be installed inside another repo. The `update-llvm.sh` script clones
-with `--depth 1` to reduce the download size.
+with `--depth 5000` to reduce the download size.
 
 Updating the repo is almost the same:
 
