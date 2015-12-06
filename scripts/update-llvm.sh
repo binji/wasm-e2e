@@ -68,6 +68,10 @@ fetch_or_clone() {
     fi
   else
     git -C "$(dirname ${dir})" clone --depth ${DEPTH} $git_url
+    # The upstream repository is in Subversion, use git pull --rebase instead
+    # of git pull to avoid generating a non-linear history in the clone:
+    #   llvm.org/docs/GettingStarted.html#git-mirror
+    git config branch.master.rebase true
     if [[ "${LLVM_USERNAME}" != "NONE" ]]; then
       # Initialize the SVN history:
       # llvm.org/docs/GettingStarted.html#for-developers-to-work-with-git-svn
