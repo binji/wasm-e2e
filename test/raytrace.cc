@@ -9,11 +9,10 @@ unsigned int buffer[WIDTH * HEIGHT];
 
 
 static unsigned int f2b(float value) {
-  // TODO unhack when min and max work correctly.
-  if (value < 0.000001f) {
+  if (value < 0.0f) {
     value = 0.0f;
   }
-  if(value > 0.999999f) {
+  if(value > 1.0f) {
     value = 1.0f;
   }
   return (int)(value * 255);
@@ -80,8 +79,7 @@ class Vec3 {
 
   float nlDot(const Vec3& other) const {
     float value = dot(other);
-    // TODO unhack when min and max work correctly.
-    if (value < 0.000001f) {
+    if (value < 0.0f) {
       value = 0.0f;
     }
     return value;
