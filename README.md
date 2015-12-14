@@ -26,8 +26,9 @@ Clone the repo, update the submodules, and update LLVM:
 
 ```
 $ git clone https://github.com/WebAssembly/wasm-e2e
+$ cd wasm-e2e
 $ git submodule update --init
-$ scripts/update-llvm.sh
+$ ./scripts/update-llvm.sh
 ```
 
 LLVM is not included as a submodule because it is quite large and requires a
@@ -39,7 +40,7 @@ Updating the repo is almost the same:
 ```
 $ git pull origin master
 $ git submodule update
-$ scripts/update-llvm.sh
+$ ./scripts/update-llvm.sh
 ```
 
 ## Building
@@ -47,20 +48,20 @@ $ scripts/update-llvm.sh
 To build all the tools:
 
 ```
-$ scripts/build-all.sh
+$ ./scripts/build-all.sh
 ```
 
 You can also build each component separately:
-- LLVM/Clang: `scripts/build-llvm.sh`
-- v8-native/d8: `scripts/build-d8.sh`
-- sexpr-wasm: `scripts/build-sexpr-wasm.sh`
+- LLVM/Clang: `./scripts/build-llvm.sh`
+- v8-native/d8: `./scripts/build-d8.sh`
+- sexpr-wasm: `./scripts/build-sexpr-wasm.sh`
 
 ## Running
 
-Use the `script/run.py` Python script to compile and run a C source file:
+Use the `./script/run.py` Python script to compile and run a C source file:
 
 ```
-$ scripts/run.py test/hello.c test/wasm.js
+$ ./scripts/run.py test/hello.c test/wasm.js
 Hello, world!
 
 $ scripts/run.py test/fizzbuzz.c test/wasm.js 
