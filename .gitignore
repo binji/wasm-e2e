@@ -1,1 +1,10 @@
+/third_party/depot_tools
 /third_party/llvm
+
+# Directory owned by gclient.
+/third_party/v8
+# The actual submodule.
+!/third_party/v8/v8
+
+# Emacs
+*~
