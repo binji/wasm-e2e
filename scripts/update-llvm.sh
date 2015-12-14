@@ -2,7 +2,7 @@
 set -o nounset
 set -o errexit
 
-SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+SCRIPT_DIR="$(dirname "$0")"
 ROOT_DIR="$(dirname "${SCRIPT_DIR}")"
 LLVM_DIR="${ROOT_DIR}/third_party/llvm"
 CLANG_DIR="${LLVM_DIR}/tools/clang"
