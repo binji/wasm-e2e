@@ -61,10 +61,10 @@ You can also build each component separately:
 Use the `./script/run.py` Python script to compile and run a C source file:
 
 ```
-$ ./scripts/run.py test/hello.c test/wasm.js
+$ ./scripts/run.py test/hello.c
 Hello, world!
 
-$ scripts/run.py test/fizzbuzz.c test/wasm.js 
+$ scripts/run.py test/fizzbuzz.c
 1
 2
 fizz
@@ -86,5 +86,4 @@ fizz
 19
 ```
 
-The script compiles the C source to v8-native binary format. The `wasm.js` file
-is used as a wrapper for loading WebAssembly binary modules in d8.
+The script compiles the C source to v8-native binary format.
