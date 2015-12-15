@@ -4,6 +4,6 @@
 [submodule "third_party/sexpr-wasm-prototype"]
 	path = third_party/sexpr-wasm-prototype
 	url = https://github.com/webassembly/sexpr-wasm-prototype
-[submodule "third_party/v8-native-prototype"]
-	path = third_party/v8-native-prototype
-	url = https://github.com/webassembly/v8-native-prototype
+[submodule "third_party/v8/v8"]
+	path = third_party/v8/v8
+	url = https://chromium.googlesource.com/v8/v8.git
