@@ -62,7 +62,7 @@ def main(args):
       subprocess.check_call([WACC, '-fno-builtin', options.c_file, '-o', s_file, '-I', '.'])
       subprocess.check_call([sys.executable, WASMATE, s_file, '-o', wast_file])
       subprocess.check_call([SEXPR_WASM, wast_file, '-o', wasm_file])
-      call_and_suppress_stderr([D8, options.js_env, '--', wasm_file])
+      call_and_suppress_stderr([D8, '--expose-wasm', options.js_env, '--', wasm_file])
 
     if options.native_env:
       executable_file = os.path.join(temp_dir, basename)
