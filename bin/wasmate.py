@@ -1,1 +1,0 @@
-../third_party/wasm-experimental/prototype-wasmate/wasmate.py
