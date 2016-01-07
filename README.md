@@ -8,11 +8,13 @@ binary format, and run it.
 Currently this includes:
 - LLVM: for compiling C source to the ".s" format, which is the current
   output of WebAssembly by the LLVM backend.
-- wasmate: for converting ".s" to the S-expression format as defined in the
-  [spec repo](https://github.com/WebAssembly/spec).
+- binaryen: different tools, including `s2wasm` for converting `.s` to the
+  S-expression format as defined in the [spec repo][].
 - sexpr-wasm: for converting the S-expression format to the v8-native binary
   format.
 - v8-native: for running the binary.
+
+  [spec repo]: https://github.com/WebAssembly/spec
 
 At this time, the contents of this repository are under development and known
 to be incomplet and inkorrect.

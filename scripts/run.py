@@ -14,7 +14,7 @@ BIN_DIR = os.path.join(REPO_ROOT_DIR, 'bin')
 
 CLANG = os.path.join(BIN_DIR, 'clang')
 WACC = os.path.join(BIN_DIR, 'wacc')
-WASMATE = os.path.join(BIN_DIR, 'wasmate.py')
+LINKER = os.path.join(BIN_DIR, 's2wasm')
 SEXPR_WASM = os.path.join(BIN_DIR, 'sexpr-wasm')
 D8 = os.path.join(BIN_DIR, 'd8')
 WASM_JS = os.path.join(REPO_ROOT_DIR, 'test', 'wasm.js')
@@ -60,7 +60,7 @@ def main(args):
       wasm_file = os.path.join(temp_dir, basename + '.wasm')
 
       subprocess.check_call([WACC, '-fno-builtin', options.c_file, '-o', s_file, '-I', '.'])
-      subprocess.check_call([sys.executable, WASMATE, s_file, '-o', wast_file])
+      subprocess.check_call([LINKER, s_file, '-o', wast_file])
       subprocess.check_call([SEXPR_WASM, wast_file, '-o', wasm_file])
       call_and_suppress_stderr([D8, '--expose-wasm', options.js_env, '--', wasm_file])
 

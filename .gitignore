@@ -1,1 +1,13 @@
+*~
 /third_party/llvm
+.ninja*
+CMakeCache.txt
+CMakeFiles/
+bin/s2wasm
+bin/asm2wasm
+bin/binaryen-shell
+bin/wasm2asm
+build.ninja
+cmake_install.cmake
+lib/
+rules.ninja
