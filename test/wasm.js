@@ -43,6 +43,6 @@ var ffi = {
   flipBuffer: flipBuffer
 };
 
-m = WASM.instantiateModule(readbuffer(arguments[0]), ffi);
+m = _WASMEXP_.instantiateModule(readbuffer(arguments[0]), ffi);
 mem8 = new Uint8Array(m.memory);
 m.main();
