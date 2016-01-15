@@ -64,6 +64,8 @@ def main(args):
         subprocess.check_call([LINKER, s_file, '-o', wast_file])
       elif extension == '.wast':
         wast_file = options.in_file
+      else:
+        raise NotImplementedError('unimplemented input file type: %s' % options.in_file)
 
       wasm_file = os.path.join(temp_dir, basename + '.wasm')
 
