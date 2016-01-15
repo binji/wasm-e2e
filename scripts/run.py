@@ -65,7 +65,7 @@ def main(args):
       elif extension == '.wast':
         wast_file = options.in_file
       else:
-        raise NotImplementedError('unimplemented input file type: %s' % options.in_file)
+        raise Exception('unimplemented input file type: %s' % options.in_file)
 
       wasm_file = os.path.join(temp_dir, basename + '.wasm')
 
