@@ -2,6 +2,10 @@
 
 # wasm-e2e
 
+**WARNING**
+wasm-e2e isn't kept up to date anymore. We're keeping it here for historical purpose only. Don't rely on it!
+**WARNING**
+
 This repository contains tools and scripts to compile C/C++ to a WebAssembly
 binary format, and run it.
 
